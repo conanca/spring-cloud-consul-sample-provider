@@ -1,0 +1,21 @@
+version: '2'
+services:
+  consul:
+    image: consul:0.7.5
+    ports:
+    - 8300:8300
+    - 8400:8400
+    - 8500:8500
+    - 8600:8600
+  provider:
+    image: reg.news.cn/gongchengdong/spring-cloud-consul-sample-provider:0.1
+    links:
+    - consul:consul
+    ports:
+    - 8080
+  admin:
+    image: reg.news.cn/gongchengdong/spring-boot-admin:0.1
+    links:
+    - consul:consul
+    ports:
+    - 18080:18080

@@ -1,0 +1,11 @@
+version: '2'
+services:
+  consul:
+    scale: 1
+    start_on_create: true
+  provider:
+    scale: 3
+    start_on_create: true
+  admin:
+    scale: 1
+    start_on_create: true
