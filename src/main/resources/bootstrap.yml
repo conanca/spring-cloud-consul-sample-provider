@@ -2,6 +2,7 @@ spring:
   cloud:
     consul:
       discovery:
+        instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
         prefer-ip-address: true
       host: localhost
       port: 8500
@@ -11,6 +12,7 @@ spring:
   cloud:
     consul:
       discovery:
+        instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
         prefer-ip-address: true
       host: consul
       port: 8500
