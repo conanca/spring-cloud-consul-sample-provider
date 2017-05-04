@@ -6,7 +6,7 @@
 ## 使用
 1. 启动consul
 2. 启动服务提供者。运行本项目入口类。注:可修改端口，运行多个实例，以观察负载均衡效果
-3. 运行[该项目](http://192.168.82.98/gongchengdong/spring-cloud-consul-sample-consumer)测试用例——SampleServiceTest，观察结果
+3. 运行[该项目](http://192.168.82.98/conanca/spring-cloud-consul-sample-consumer)测试用例——SampleServiceTest，观察结果
 
 
 ## rancher上部署运行
@@ -16,8 +16,8 @@
  ```
 2. build docker镜像并push至镜像仓库
   ```
-  docker build . -t "reg.news.cn/gongchengdong/spring-cloud-consul-sample-provider:0.1"
-  docker push reg.news.cn/gongchengdong/spring-cloud-consul-sample-provider:0.1
+  docker build . -t "reg.dolplay.com/conanca/spring-cloud-consul-sample-provider:0.1"
+  docker push reg.dolplay.com/conanca/spring-cloud-consul-sample-provider:0.1
   ```
 3. rancher上“添加应用栈”，“导入COMPOSE”时选择/rancher/目录下的配置文件
 
